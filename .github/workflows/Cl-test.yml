@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Output HeadRef
-      run: echo "${{ github.head_ref }}"
+      run: echo '${{ github.head_ref }}'
 
     - name: Loop de test
       run: |
