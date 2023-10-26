@@ -4,8 +4,9 @@ on: [push]
 
 jobs:
   build:
-    name: Build e Teste
+    name: Build and Test
     runs-on: ubuntu-latest
+    timeout-minutes: 2
 
     steps:
     - name: Verificar Código
