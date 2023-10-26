@@ -11,9 +11,12 @@ jobs:
     steps:
     - name: Verificar Código
       run: echo "Verificando o código..."
+      timeout-minutes: 2
 
     - name: Testar Código
       run: echo "Testando o código..."
+      timeout-minutes: 2
 
     - name: Implantação
       run: echo "Implantando o código..."
+      timeout-minutes: 2
