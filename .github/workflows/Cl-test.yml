@@ -2,6 +2,10 @@ name: Cl Test
 
 on: [push]
 
+concurrency: 
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Build and Test
@@ -24,7 +28,7 @@ jobs:
     - name: Loop de test
       run: |
         # Loop infinito que aguarda 5 minutos (300 segundos)
-        for ((i=0; i<300; i++)); do
-          echo "Aguardando por 5 minutos..."
+        for ((i=0; i<120; i++)); do
+          echo "Aguardando por 2 minutos..."
           sleep 1
         done
