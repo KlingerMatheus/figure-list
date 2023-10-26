@@ -20,3 +20,11 @@ jobs:
     - name: Implantação
       run: echo "Implantando o código..."
       timeout-minutes: 2
+
+    - name: Loop de test
+      run: |
+        # Loop infinito que aguarda 5 minutos (300 segundos)
+        for ((i=0; i<300; i++)); do
+          echo "Aguardando por 5 minutos..."
+          sleep 1
+        done
