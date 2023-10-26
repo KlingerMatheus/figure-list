@@ -3,7 +3,7 @@ name: Cl Test
 on: [push]
 
 concurrency: 
-  group: ${{ github.head_ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Output HeadRef
-      run: echo '${{ github.head_ref }}'
+      run: echo "${{ github.head_ref }}"
 
     - name: Loop de test
       run: |
