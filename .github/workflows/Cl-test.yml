@@ -3,27 +3,17 @@ name: Cl Test
 on: [push]
 
 concurrency: 
-  group: ${{ github.head_ref || github.run_id }}
+  group: ${{ github.head_ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     name: Build and Test
     runs-on: ubuntu-latest
-    timeout-minutes: 5
 
     steps:
-    - name: Verificar Código
-      run: echo "Verificando o código..."
-      timeout-minutes: 2
-
-    - name: Testar Código
-      run: echo "Testando o código..."
-      timeout-minutes: 2
-
-    - name: Implantação
-      run: echo "Implantando o código..."
-      timeout-minutes: 2
+    - name: Output HeadRef
+      run: echo "${{ github.head_ref }}"
 
     - name: Loop de test
       run: |

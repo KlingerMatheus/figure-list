@@ -13,7 +13,7 @@ function App() {
           type="textarea"
           onChange={(e) => setStickers(e.target.value)}
           id="textInput"
-          placeholder="type here 2"
+          placeholder="stop last commit check"
         />
       </div>
       <Result value={stickers} />
