@@ -13,7 +13,7 @@ function App() {
           type="textarea"
           onChange={(e) => setStickers(e.target.value)}
           id="textInput"
-          placeholder="text"
+          placeholder="tsasasdFDSSDFfsdsdffsdsdf FSDads"
         />
       </div>
       <Result value={stickers} />
